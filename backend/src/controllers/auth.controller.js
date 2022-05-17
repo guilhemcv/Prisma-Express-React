@@ -1,4 +1,4 @@
-const createError = require("http-errors");
+/* eslint-disable no-restricted-syntax */
 
 const auth = require("../services/auth.services");
 
@@ -37,7 +37,7 @@ class authController {
         message: "All users",
         data: users,
       });
-    } catch (e) {
+    } catch (error) {
       next(console.log(error));
     }
   };

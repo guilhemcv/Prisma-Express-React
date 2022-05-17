@@ -1,5 +1,0 @@
-
-// register
-
-
-module.exports = router;

@@ -1,3 +1,7 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-unused-expressions */
 import React, { useState } from "react";
 
 function Connexion() {
@@ -14,9 +18,6 @@ function Connexion() {
       };
     });
   };
-
-  console.log(user)
-  console.log(token)
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -50,9 +51,9 @@ function Connexion() {
           width="480"
           height="480"
           frameBorder="0"
-          class="giphy-embed"
+          className="giphy-embed"
           allowFullScreen
-        ></iframe>
+        />
       </div>
     </div>
   ) : (

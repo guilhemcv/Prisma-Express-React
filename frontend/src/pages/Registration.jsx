@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-unused-expressions */
 import React, { useState } from "react";
 
 function Connexion() {
@@ -14,7 +17,6 @@ function Connexion() {
     });
   };
 
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     const res = await fetch("http://localhost:5005/auth/", {
@@ -26,7 +28,11 @@ function Connexion() {
     });
     const data = await res.json();
     console.log(data);
-    data.status === true ? alert("Registration Successful - redirection to the administration page") : "Registration Failed";
+    data.status === true
+      ? alert(
+          "Registration Successful - redirection to the administration page"
+        )
+      : "Registration Failed";
   };
 
   return (
